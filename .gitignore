@@ -1,6 +1,30 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Jupyter / Colab
 .ipynb_checkpoints/
-.DS_Store
+
+# Data (large files should not go to GitHub)
+data/raw/
+data/processed/
+*.mzML
+*.mgf
+*.msp
+*.csv
+*.tsv
+*.parquet
+*.npz
+
+# Results
 results/
-data/
+*.png
+*.pdf
+
+# Mac
+.DS_Store
+
+# Misc
+.env
