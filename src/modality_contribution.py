@@ -346,3 +346,82 @@ best_uni = np.minimum.reduce([
 improve = best_uni - np.abs(err_fus)  # >0 ⇒ fused better than best unimodal
 
 print(f"[Improvement] fraction of test samples improved by fusion: {(improve>0).mean():.2%}")
+
+
+
+
+
+#PLOTTING CDF CURVES
+import numpy as np
+import matplotlib.pyplot as plt
+from pathlib import Path
+
+# =========================
+# SETTINGS
+# =========================
+SAVE_FIGS = True
+FIG_DIR   = Path("./figs_modality_contribution")
+FIG_DIR.mkdir(parents=True, exist_ok=True)
+
+# =========================
+# CDF helper
+# =========================
+def _ecdf(x: np.ndarray):
+    x = np.asarray(x).reshape(-1)
+    x = x[np.isfinite(x)]
+    xs = np.sort(x)
+    ys = np.arange(1, len(xs) + 1) / len(xs) if len(xs) > 0 else np.array([])
+    return xs, ys
+
+def plot_abs_error_cdf(
+    y_true,
+    preds_dict,
+    title="CDF of absolute errors",
+    save_path=None
+):
+    """
+    y_true: array-like shape (N,)
+    preds_dict: {"label": y_pred_array, ...}
+    """
+    y_true = np.asarray(y_true).reshape(-1)
+
+    plt.figure(figsize=(5.5, 5.0))
+
+    for label, y_pred in preds_dict.items():
+        y_pred = np.asarray(y_pred).reshape(-1)
+        if len(y_pred) != len(y_true):
+            raise ValueError(f"Length mismatch for '{label}': {len(y_pred)} vs {len(y_true)}")
+
+        abs_err = np.abs(y_true - y_pred)
+        xs, ys = _ecdf(abs_err)
+        plt.plot(xs, ys, label=label)
+
+    plt.xlabel(r"|Error| = |y_true − y_pred|")
+    plt.ylabel("Empirical CDF")
+    plt.title(title)
+    plt.grid(alpha=0.3)
+    plt.legend()
+    plt.tight_layout()
+
+    if save_path is not None:
+        plt.savefig(save_path, dpi=300, bbox_inches="tight")
+    plt.show()
+
+
+# =========================
+# CALL (edit labels as you like)
+# =========================
+preds = {
+    "Mol2Vec-only": y_m2v,
+    "RDKit-only": y_rd,
+    "GNN_emb-only": y_gnn,
+    "SMILES_emb-only": y_smile,
+    "Fused (all modalities)": y_fused,
+}
+
+plot_abs_error_cdf(
+    y_true=y_test,
+    preds_dict=preds,
+    title="Error CDF — unimodal vs fused",
+    save_path=(FIG_DIR / "error_cdf_unimodal_vs_fused.png") if SAVE_FIGS else None
+)
