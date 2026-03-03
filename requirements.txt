@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+lightgbm
+torch
+torch-geometric
+deepchem
+rdkit-pypi
+shap
+matplotlib
+dgl
+dgllife
+mol2vec
