@@ -13,12 +13,12 @@ Multmodal_Fusion/
 │   └── utils.py
 │
 ├── notebooks/                   # Reproducible workflows
-│   ├── 01_Early_Fusion.ipynb
-│   ├── 02_Late_Fusion.ipynb
-│   ├── 03_Uncertainty.ipynb
-│   ├── 04_Modality_Contribution.ipynb
-│   ├── Data_processing.ipynb
-│   └── MS2_frag_Processing.ipynb
+│   ├── 03_Early_Fusion.ipynb
+│   ├── 04_Late_Fusion.ipynb
+│   ├── 05_Uncertainty.ipynb
+│   ├── 06_Modality_Contribution.ipynb
+│   ├── 01_Data_processing.ipynb
+│   └── 02_MS2_frag_Processing.ipynb
 │
 ├── data/                        # Input format notes
 ├── results/                     # Output folder
