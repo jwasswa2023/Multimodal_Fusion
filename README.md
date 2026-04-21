@@ -26,3 +26,10 @@ Multmodal_Fusion/
 ├── LICENSE
 └── README.md
 ```
+
+
+#Acknowledgments
+AI Use: Artificial intelligence models from OpenAI (ChatGPT), Anthropic (Claude), and Google (Gemini) were used as coding aids.
+
+#Contact
+Joseph Wasswa, SUNY Polytechnic Institute wasswaj@sunypoly.edu
