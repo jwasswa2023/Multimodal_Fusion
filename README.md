@@ -2,6 +2,8 @@
 
 A Python-based research repository for predicting molecular properties using multimodal fusion approaches. The project combines molecular representations, MS/MS fragmentation information, and machine learning models to evaluate early fusion, late fusion, uncertainty, and modality contribution.
 
+---
+
 ## Project Structure
 
 ```text
@@ -26,91 +28,108 @@ Multimodal_Fusion/
 ├── LICENSE
 └── README.md
 
+
+
+
+# Features
+
+```markdown
 ## Features
-Data preprocessing for molecular property prediction
-MS/MS fragmentation processing
-Early fusion modeling
-Late fusion modeling
-Uncertainty analysis
-Modality contribution analysis
-Reproducible notebook workflows
-Installation
+
+- Data preprocessing for molecular property prediction  
+- MS/MS fragmentation processing  
+- Early fusion modeling  
+- Late fusion modeling  
+- Uncertainty analysis  
+- Modality contribution analysis  
+- Reproducible notebook workflows  
+
+## Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/jwasswa2023/Multimodal_Fusion.git
 cd Multimodal_Fusion
 
-Create and activate a virtual environment:
+### Create and activate a virtual environment:
 
 python -m venv venv
 source venv/bin/activate
 
-On Windows:
-
+### On Windows:
 venv\Scripts\activate
 
-## Install dependencies:
+
+### Install dependencies:
 
 pip install -r requirements.txt
-Requirements
+
+
+---
+
+# 🟢 STEP 5 — Requirements
+
+```markdown
+## Requirements
 
 This project uses:
 
-Python
-NumPy
-pandas
-scikit-learn
-LightGBM
-PyTorch
-PyTorch Geometric
-DeepChem
-RDKit
-SHAP
-DGL
-DGL-LifeSci
-mol2vec
-matplotlib
-Workflow
+- Python  
+- NumPy  
+- pandas  
+- scikit-learn  
+- LightGBM  
+- PyTorch  
+- PyTorch Geometric  
+- DeepChem  
+- RDKit  
+- SHAP  
+- DGL  
+- DGL-LifeSci  
+- mol2vec  
+- matplotlib  
+
+
+## Workflow
 
 Run the notebooks in order:
 
-01_Data_processing.ipynb
-02_MS2_frag_Processing.ipynb
-03_Early_Fusion.ipynb
-04_Late_Fusion.ipynb
-05_Uncertainty.ipynb
-06_Modality_Contribution.ipynb
-Methods
+1. 01_Data_processing.ipynb  
+2. 02_MS2_frag_Processing.ipynb  
+3. 03_Early_Fusion.ipynb  
+4. 04_Late_Fusion.ipynb  
+5. 05_Uncertainty.ipynb  
+6. 06_Modality_Contribution.ipynb
+
+
+## Methods
 
 This repository explores multimodal molecular property prediction using:
 
-Early Fusion
-
+### Early Fusion
 Combines multiple molecular feature representations before model training.
 
-Late Fusion
-
+### Late Fusion
 Trains separate models for different modalities and combines predictions afterward.
 
-Uncertainty Analysis
-
+### Uncertainty Analysis
 Evaluates confidence and reliability of model predictions.
 
-Modality Contribution
-
+### Modality Contribution
 Assesses the contribution of each molecular data modality to prediction performance.
 
- License
+
+## License
 
 This project is licensed under the MIT License.
 
-Acknowledgments
+## Acknowledgments
 
 Artificial intelligence tools from OpenAI, Anthropic, and Google were used as coding aids during development.
 
-Contact
+## Contact
 
-Joseph Wasswa
-SUNY Polytechnic Institute
-wasswaj@sunypoly.edu
+Joseph Wasswa  
+SUNY Polytechnic Institute  
+wasswaj@sunypoly.edu  
