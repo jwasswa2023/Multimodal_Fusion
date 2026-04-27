@@ -5,7 +5,7 @@ A Python-based research repository for predicting molecular properties using mul
 ---
 
 ## Project Structure
-
+```
 Multimodal_Fusion/
 ├── src/
 │   ├── fusion_early.py
@@ -26,7 +26,7 @@ Multimodal_Fusion/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-
+```
 
 
 
