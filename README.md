@@ -33,7 +33,6 @@ Multimodal_Fusion/
 
 # Features
 
-```markdown
 ## Features
 
 - Data preprocessing for molecular property prediction  
@@ -48,7 +47,6 @@ Multimodal_Fusion/
 
 Clone the repository:
 
-```bash
 git clone https://github.com/jwasswa2023/Multimodal_Fusion.git
 cd Multimodal_Fusion
 
@@ -65,8 +63,6 @@ venv\Scripts\activate
 
 pip install -r requirements.txt
 
-
-```markdown
 ## Requirements
 
 This project uses:
