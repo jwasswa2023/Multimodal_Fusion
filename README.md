@@ -66,10 +66,6 @@ venv\Scripts\activate
 pip install -r requirements.txt
 
 
----
-
-# 🟢 STEP 5 — Requirements
-
 ```markdown
 ## Requirements
 
