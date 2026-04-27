@@ -36,12 +36,12 @@ Modality contribution analysis
 Reproducible notebook workflows
 Installation
 
-##Clone the repository:
+Clone the repository:
 
 git clone https://github.com/jwasswa2023/Multimodal_Fusion.git
 cd Multimodal_Fusion
 
-## Create and activate a virtual environment:
+Create and activate a virtual environment:
 
 python -m venv venv
 source venv/bin/activate
@@ -101,15 +101,15 @@ Modality Contribution
 
 Assesses the contribution of each molecular data modality to prediction performance.
 
-## License
+ License
 
 This project is licensed under the MIT License.
 
-## Acknowledgments
+Acknowledgments
 
 Artificial intelligence tools from OpenAI, Anthropic, and Google were used as coding aids during development.
 
-## Contact
+Contact
 
 Joseph Wasswa
 SUNY Polytechnic Institute
