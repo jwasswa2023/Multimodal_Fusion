@@ -1,9 +1,12 @@
 # Multimodal Fusion for Molecular Property Prediction
 
-```
-Multmodal_Fusion/
-│
-├── src/                         # Core scripts
+A Python-based research repository for predicting molecular properties using multimodal fusion approaches. The project combines molecular representations, MS/MS fragmentation information, and machine learning models to evaluate early fusion, late fusion, uncertainty, and modality contribution.
+
+## Project Structure
+
+```text
+Multimodal_Fusion/
+├── src/
 │   ├── fusion_early.py
 │   ├── fusion_late.py
 │   ├── uncertainty_analysis.py
@@ -11,25 +14,103 @@ Multmodal_Fusion/
 │   ├── Data_processing.py
 │   ├── MS2_frag_Processing.py
 │   └── utils.py
-│
-├── notebooks/                   # Reproducible workflows
+├── notebooks/
+│   ├── 01_Data_processing.ipynb
+│   ├── 02_MS2_frag_Processing.ipynb
 │   ├── 03_Early_Fusion.ipynb
 │   ├── 04_Late_Fusion.ipynb
 │   ├── 05_Uncertainty.ipynb
-│   ├── 06_Modality_Contribution.ipynb
-│   ├── 01_Data_processing.ipynb
-│   └── 02_MS2_frag_Processing.ipynb
-│
-├── data/                        # Input format notes
-├── results/                     # Output folder
+│   └── 06_Modality_Contribution.ipynb
+├── data/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-```
 
+## Features
+Data preprocessing for molecular property prediction
+MS/MS fragmentation processing
+Early fusion modeling
+Late fusion modeling
+Uncertainty analysis
+Modality contribution analysis
+Reproducible notebook workflows
+Installation
 
-#Acknowledgments
-AI Use: Artificial intelligence models from OpenAI (ChatGPT), Anthropic (Claude), and Google (Gemini) were used as coding aids.
+##Clone the repository:
 
-#Contact
-Joseph Wasswa, SUNY Polytechnic Institute wasswaj@sunypoly.edu
+git clone https://github.com/jwasswa2023/Multimodal_Fusion.git
+cd Multimodal_Fusion
+
+## Create and activate a virtual environment:
+
+python -m venv venv
+source venv/bin/activate
+
+On Windows:
+
+venv\Scripts\activate
+
+## Install dependencies:
+
+pip install -r requirements.txt
+Requirements
+
+This project uses:
+
+Python
+NumPy
+pandas
+scikit-learn
+LightGBM
+PyTorch
+PyTorch Geometric
+DeepChem
+RDKit
+SHAP
+DGL
+DGL-LifeSci
+mol2vec
+matplotlib
+Workflow
+
+Run the notebooks in order:
+
+01_Data_processing.ipynb
+02_MS2_frag_Processing.ipynb
+03_Early_Fusion.ipynb
+04_Late_Fusion.ipynb
+05_Uncertainty.ipynb
+06_Modality_Contribution.ipynb
+Methods
+
+This repository explores multimodal molecular property prediction using:
+
+Early Fusion
+
+Combines multiple molecular feature representations before model training.
+
+Late Fusion
+
+Trains separate models for different modalities and combines predictions afterward.
+
+Uncertainty Analysis
+
+Evaluates confidence and reliability of model predictions.
+
+Modality Contribution
+
+Assesses the contribution of each molecular data modality to prediction performance.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgments
+
+Artificial intelligence tools from OpenAI, Anthropic, and Google were used as coding aids during development.
+
+## Contact
+
+Joseph Wasswa
+SUNY Polytechnic Institute
+wasswaj@sunypoly.edu
